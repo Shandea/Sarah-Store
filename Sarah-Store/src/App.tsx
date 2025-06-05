@@ -1,11 +1,12 @@
-import { Heading } from './components/Heading';
+// import { Heading } from './components/Heading';
+import { FeatureSection } from './components/FeatureSection';
 
 function App() {
   
 
   return (
     <div>
-      <Heading>Word</Heading>
+      <FeatureSection />
     </div>
   )
 }
