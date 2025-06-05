@@ -1,6 +1,8 @@
 import React from "react";
 import clsx from "clsx";
 
+
+
 type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "link" | "secondary";
@@ -19,23 +21,25 @@ const sizeClasses = {
 
 export default function Button({
   children,
-  variant = "primar
-size = "md",
+  variant = "primary",
+  size = "md",
   onClick,
   type = "button",
   disabled = false,
   className= "",
 }: ButtonProps) {
+  
   const baseClasses =
     "inline-flex items-center justify-center rounded-[8px] font-medium font-inter transition-colors duration-200 text-center";
-
+  
   const variantClasses =
     variant === "primary"
       ? "bg-[#0D9488] text-white hover:bg-[#0C827A]"
       : variant === "secondary"
       ? "bg-gray-200 text-[#0D9488] hover:bg-gray-300"
       : "text-[#0D9488] underline hover:text-[#0C827A] bg-transparent";
-      const disabledClasses = disabled ? "opacity-50 cursor-not-allowed" : "";
+
+  const disabledClasses = disabled ? "opacity-50 cursor-not-allowed" : "";
 
   return (
     <button
@@ -54,3 +58,6 @@ size = "md",
     </button>
   );
 }
+
+
+
