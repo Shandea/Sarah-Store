@@ -1,10 +1,12 @@
-
+import { Heading } from './components/Heading';
 
 function App() {
   
 
   return (
-    <div></div>
+    <div>
+      <Heading>Word</Heading>
+    </div>
   )
 }
 
