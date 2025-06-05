@@ -1,28 +1,45 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
 
-type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4';
+
+
+type HeadingLevel = "h1" | "h2" | "h3" | "h4";
+
+
 
 interface HeadingProps {
-  level?: HeadingLevel;
-  className?: string;
+
+  level: HeadingLevel;
+
   children: React.ReactNode;
+
+  className?: string; 
+
 }
 
-const baseStyles: Record<HeadingLevel, string> = {
-  h1: 'text-slate-800 font-bold leading-[1.1] text-[32px] md:text-[48px]',
-  h2: 'text-slate-800 font-bold leading-[1.2] text-[28px] md:text-[36px]',
-  h3: 'text-slate-800 font-semibold leading-[1.3] text-[20px] md:text-[24px]',
-  h4: 'text-slate-800 font-semibold leading-[1.4] text-[18px] md:text-[20px]',
+
+
+const styles: Record<HeadingLevel, string> = {
+
+  h1: "text-[48px] md:text-[32px] font-bold leading-[1.1] text-[#1E293B]",
+
+  h2: "text-[36px] md:text-[28px] font-bold leading-[1.2] text-[#1E293B]",
+
+  h3: "text-[24px] md:text-[20px] font-semibold leading-[1.3] text-[#1E293B]",
+
+  h4: "text-[20px] md:text-[18px] font-semibold leading-[1.4] text-[#1E293B]",
+
 };
 
-export const Heading: React.FC<HeadingProps> = ({
-  level = 'h1',
-  className = '',
-  children,
-}) => {
-  const Tag = level as keyof HTMLElementTagNameMap; 
-  const styles = baseStyles[level];
 
-  return <Tag className={clsx(styles, className)}>{children}</Tag>;
+
+const Heading: React.FC<HeadingProps> = ({ level, children, className="" }) => {
+
+  const Tag = level;
+
+  return <Tag className={`${styles[level]} ${className}`}>{children}</Tag>;
+
 };
+
+
+
+export default Heading;

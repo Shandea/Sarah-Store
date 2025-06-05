@@ -2,7 +2,7 @@ import React from "react";
 
 import Card from "./Card";
 
-import { Heading } from "./Heading";
+import Heading from "./Heading";
 
 
 
@@ -12,7 +12,8 @@ const features = [
 
     id: 1,
 
-    image: "/images/nike1.png",
+    // image: "/assets/nike1.png",
+    image: "/public/images/nike1.png",
 
     title: "Nike Air Max 90",
 
@@ -28,7 +29,7 @@ const features = [
 
     id: 2,
 
-    image: "/images/nike2.png",
+    image: "/public/images/nike2.png",
 
     title: "Nike Air Force 1",
 
@@ -44,7 +45,7 @@ const features = [
 
     id: 3,
 
-    image: "/images/nike3.png",
+    image: "/public/images/nike3.png",
 
     title: "Nike React Infinity",
 
@@ -60,7 +61,7 @@ const features = [
 
     id: 4,
 
-    image: "/images/nike4.png",
+    image: "/public/images/nike4.png",
 
     title: "Nike Pegasus Trail",
 
