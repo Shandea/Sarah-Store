@@ -1,13 +1,11 @@
-import { Heading } from './components/Heading';
 
-function App() {
-  
 
+const App = () => {
   return (
     <div>
-      <Heading>Word</Heading>
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

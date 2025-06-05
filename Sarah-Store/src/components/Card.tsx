@@ -1,24 +1,79 @@
-import React from 'react';
+import React from "react";
 
-type CardProps = {
+import Button from "./Button";
+
+
+
+interface CardProps {
+
+  image: string;
+
   title: string;
-  body: string;
-  icon?: React.ReactNode;
-  iconPosition?: 'top' | 'left';
-};
 
-export const Card: React.FC<CardProps> = ({ title, body, icon, iconPosition = 'top' }) => {
-  const hasIcon = Boolean(icon);
+  price: string;
+
+  description: string;
+
+  sizes: string[];
+
+}
+
+
+
+const Card: React.FC<CardProps> = ({ image, title, price, description, sizes }) => {
 
   return (
-    <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-      <div className={`flex ${iconPosition === 'left' ? 'flex-row' : 'flex-col'} items-center gap-4`}>
-        {hasIcon && <div className="flex-shrink-0">{icon}</div>}
-        <div>
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="text-base font-normal mt-2">{body}</p>
-        </div>
+
+    <div className="bg-white border-gray-200 rounded-xl p-4 shadow-lg hover:shadow-md transition w-full max-w-sm flex flex-col">
+
+      <img src={image} alt={title} className="w-full h-48 object-contain mb-4 rounded-md" />
+
+
+
+      <div className="flex justify-between items-center mb-2">
+
+        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+
+        <span className="text-teal-600 font-bold">{price}</span>
+
       </div>
+
+
+
+      <p className="text-sm text-gray-600 mb-4">{description}</p>
+
+
+
+      <div className="flex flex-wrap gap-2 mb-4">
+
+        {sizes.map((size) => (
+
+          <span
+
+            key={size}
+
+            className="text-sm px-3 py-1 rounded-full border border-gray-300 bg-gray-50"
+
+          >
+
+            {size}
+
+          </span>
+
+        ))}
+
+      </div>
+
+
+
+      <Button className="mt-auto w-full">Add to Cart</Button>
+
     </div>
+
   );
+
 };
+
+
+
+export default Card;
