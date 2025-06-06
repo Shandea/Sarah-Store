@@ -13,7 +13,7 @@ const features = [
     id: 1,
 
     // image: "/assets/nike1.png",
-    image: "/public/images/nike1.png",
+    image: "/images/nike1.png",
 
     title: "Nike Air Max 90",
 
@@ -29,7 +29,7 @@ const features = [
 
     id: 2,
 
-    image: "/public/images/nike2.png",
+    image: "/images/nike2.png",
 
     title: "Nike Air Force 1",
 
@@ -45,7 +45,7 @@ const features = [
 
     id: 3,
 
-    image: "/public/images/nike3.png",
+    image: "/images/nike3.png",
 
     title: "Nike React Infinity",
 
@@ -61,7 +61,7 @@ const features = [
 
     id: 4,
 
-    image: "/public/images/nike4.png",
+    image: "/images/nike4.png",
 
     title: "Nike Pegasus Trail",
 

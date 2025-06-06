@@ -33,7 +33,7 @@ export default function Hero() {
         {/* Right: Image */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
-            src="/public/images/sneakers.png"
+            src="/images/sneakers.png"
             alt="Premium sneakers product shot"
             className="size-full object-cover rounded-lg"
           />
